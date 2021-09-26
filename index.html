@@ -13,12 +13,12 @@
     <title>Money Clicker</title>
   </head>
   <body onload="backAudio()">
-    <center>
+    <div id="center">
       <div id="click">
-        <a href="#" id="clickButton" onclick="moneyAdd(), playAudio()">Click!</a>
+        <a href="#" id="clickButton" onclick="event.preventDefault(); event.stopPropagation(); moneyAdd(); playAudio()">Click!</a>
         <br />
         <a id="money">Money: 0$</a>
       </div>
-    </center>
+    </div>
   </body>
 </html>
