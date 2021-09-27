@@ -6,8 +6,13 @@
 body {
   font-family: "Press Start 2P";
   background-image: url(img/sky.png);
-  
+  background-repeat: repeat-x;
+  color: white;
   overflow: hidden;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
@@ -84,4 +89,12 @@ a {
   #money {
     font-size: 40px;
   }
+}
+
+.title {
+  font-size: 300%;
+}
+
+#subDiv {
+  width: 800px;
 }

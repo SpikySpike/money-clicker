@@ -13,8 +13,8 @@ function moneyAdd() {
     const soundCheer = new Audio("./sounds/sound3.wav");
     soundCheer.play();
 
-    var cursorChange = document.getElementById("clickButton");
-    cursorChange.style.cursor = "url(./img/coin-cursor-double.png), default!important";
+    const cursorChange = document.getElementById("clickButton");
+    cursorChange.style.cursor = "url(img/coin-cursor-double.png), default!important";
   }
 }
 
