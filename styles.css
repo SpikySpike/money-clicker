@@ -55,6 +55,7 @@ a {
 }
 
 #money {
+  color: white;
   outline: none;
   user-select: none;
 }
