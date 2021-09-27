@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "Press Start 2P";
+    src: url(assets/fonts/PressStart2P-Regular.ttf);
+}
+
+body {
+    font-family: "Press Start 2P";
+    background-image: url(assets/img/sky.png);
+    background-repeat: repeat-x;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    size: large;
+    font-size: 100px;
+}
+
+::selection {
+    color: white;
+    background-color: rgba(7, 14, 107, 0.507);
+}
+
+.center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.center > div {
+    text-align: center;
+    overflow: hidden;
+}
+
+.clickButton {
+    background-image: url(assets/img/btn.png);
+    background-size: 244px;
+    background-repeat: no-repeat;
+    border: none;
+    color: white;
+    padding: 40px 37px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    height: 78px;
+    font-size: 30px;
+    cursor: pointer;
+    cursor: url(assets/img/coin-cursor.png), default !important;
+    transition: color 0.3s, background-color 0.15s;
+    outline: none;
+    user-select: none;
+}
+
+.clickButton.doubleMoney {
+    cursor: url(assets/img/coin-cursor-double.png), default !important;
+}
+
+.money {
+    color: white;
+    outline: none;
+    user-select: none;
+}
+
+.clickButton:active {
+    background-image: url(assets/img/btn-active.png);
+    background-size: 244px;
+    background-repeat: no-repeat;
+    border: none;
+    color: white;
+    padding: 40px 37px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    height: 78px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .money {
+        font-size: 40px;
+    }
+}
+
+.title {
+    font-size: 300%;
+}
