@@ -32,7 +32,7 @@ export const CoinButton = ({ addMoney, cursorClass }) => {
             href="#"
             className={"clickButton " + cursorClass}
             onClick={(event) => handleClick(event)}
-            draggable="false"
+            draggable={false}
         >
             Click!
         </a>
@@ -54,7 +54,7 @@ export const Clicker = () => {
                     addMoney={() => {
                         setMoney((old) => {
                             const money = old + 1;
-                            if (money === 10) {
+                            if (money === 100) {
                                 setCursorClass("doubleMoney");
                                 playAudioDouble();
                             }
@@ -63,8 +63,10 @@ export const Clicker = () => {
                     }}
                     cursorClass={cursorClass}
                 />
-                <br />
-                <a className="money">Money: {money}$</a>
+
+                <div>
+                    <a className="money">Money: {money}$</a>
+                </div>
             </div>
         </div>
     );
