@@ -1,16 +1,16 @@
-let money = 0;
-let sounds = new Audio([
-  "./sounds/sound1.wav",
-  "./sounds/sound3.wav",
-  "./sounds/sound5.wav",
-]);
+var money = 0;
+var sound_names = ["./sounds/sound1.wav", "./sounds/sound3.wav", "./sounds/sound5.wav"];
+var sounds = [];
+for (sound of sound_names) {
+    sounds.add(sound);
+}
 
 function moneyAdd() {
   money++;
   document.getElementById("money").innerHTML = "Money: " + money + "$";
 
   if (money == "100") {
-    const soundCheer = new Audio("./sounds/sound3.wav");
+    const soundCheer = sounds[1];
     soundCheer.play();
 
     var cursorChange = document.getElementById("clickButton");
@@ -19,14 +19,14 @@ function moneyAdd() {
 }
 
 function audioRandom(sounds) {
-  let soundRandom = [Math.floor(Math.random() * sounds.length)];
-  soundRandom.play();
+  var soundRandom = [Math.floor(Math.random() * (sounds.length - 1))];
+  return soundRandom;
 }
 
 function playAudio() {
-  const audio = new Audio("./sounds/sound1.wav");
+  audio = audioRandom(sounds);
   audio.volume = 0.6;
-  audio.play();
+  audio.play()
 }
 
 function backAudio() {
